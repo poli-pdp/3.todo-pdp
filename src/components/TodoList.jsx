@@ -1,5 +1,14 @@
-const TodoList = () => {
-  return <div>TodoList</div>;
+/* eslint-disable react/prop-types */
+import TodoItem from "./TodoItem";
+
+const TodoList = ({ todos }) => {
+  return (
+    <div>
+      {todos.map((todo) => (
+        <TodoItem key={todo.id} todo={todo} />
+      ))}
+    </div>
+  );
 };
 
 export default TodoList;
