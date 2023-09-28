@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import style from "./TodoItem.module.css";
-const TodoItem = ({ todo, deleteTodo, completedTodo }) => {
+const TodoItem = ({ todo, deleteTodo, completedTodo, setEdit }) => {
   return (
     <li className={style.list}>
       <div
@@ -11,7 +11,7 @@ const TodoItem = ({ todo, deleteTodo, completedTodo }) => {
       <div>
         <button onClick={() => deleteTodo(todo)}>D</button>
         <button onClick={() => completedTodo(todo)}>C</button>
-        <button>E</button>
+        <button onClick={() => setEdit(todo)}>E</button>
       </div>
     </li>
   );
