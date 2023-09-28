@@ -4,7 +4,7 @@ import Form from "./components/Form";
 import Header from "./components/Header";
 const App = () => {
   const [inputTodo, setInputTodo] = useState("");
-
+  const [todos, setTodos] = useState([]);
   return (
     <div className={style.container}>
       <div className={style.appwrapper}>
@@ -12,7 +12,12 @@ const App = () => {
           <Header />
         </div>
         <div>
-          <Form />
+          <Form
+            inputTodo={inputTodo}
+            setInputTodo={setInputTodo}
+            todos={todos}
+            setTodos={setTodos}
+          />
         </div>
       </div>
     </div>
